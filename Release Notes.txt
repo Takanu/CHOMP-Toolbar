@@ -1,0 +1,152 @@
+RELEASE NOTES
+What to expect in upcoming versions:
+Features
+Theres a lot of features I need to add, heres the ones on the top of my bucket list, in order of priority:
+- Window Snapping (so when expanding an app window, it will never go behind the toolbar)
+- Preferences Menu
+- Toggle Media Dock Button
+- New Custom Toolbar Script (to more easily create toolbars using the current standards
+of the toolbar, and to support an automated left-handed mode)
+- Left-Handed Mode
+- Scale UI Settings
+- Toolbar Size Settings
+- Collapse Toolbar Option
+
+Icons (pending)
+- New Reset, Settings and Save/Load icon paradigms.  I’m being pretty obsessive over
+their design to both fit the aggressively digital aesthetic and make them relatively
+easy to understand at a glance.  Still a work in progress
+
+ZBrush (pending)
+- Switch the NewDocument button with the ResetDocument button (makes more sense).
+
+0.67:
+Mischief
+- Updated the toolbar to recognise both the paid and free versions of Mischief 2.0.
+- Updated the toolbar to register all the new keybinds, apart from.....
+- Due to the way opacity shortcuts now work (with the 0-9 keys instead of an up/down key), the
+opacity slider had to be removed.  I'd need to make a custom key type to fix this, so in the
+meantime theres nothing I can do sorry :/
+- Have an Open button in the mean time?
+- Move/Select/Rotate buttons don't have to be held, they select the tool now instead, 
+using the new keybinds provided.
+
+0.66:
+Touch Profiles
+- Added a new profile for the Thinkpad Yoga (thanks to TabletPCReview user thewish).
+- Removed the (default) tag, which i'm hoping solves the current Touch Profile bug.
+
+Extra
+- Added a new README text file, to instruct users in posting bug reports and fixing the current
+touch profile issue.
+
+0.65:
+Touch Profiles
+- Added a touch profile for the Surface Pro 3, thanks to TabletPCReview user VertPusher.
+It should automatically work when using the toolbar with the Surface Pro 3, but if not,
+open the script and make it the default touch profile.  Simply remove the "(default)" text
+in front of any touch toolbar profile name, and add it to the touch profile of the SP3.
+
+Extra Notes
+- Substance Painter after the 1.0 update is less shit on Intel Integrated Graphics, making it
+actually kinda usable.  As a result i will try to ensure the toolbar becomes fully featured.
+
+0.64:
+ZBrush
+- Added Move/Rotate/Scale buttons
+- Added Edit/Draw buttons.
+- Added Symmetry and Select buttons
+- Removed the FocusMask button (I didnt get the shortcut right on that one, >.>)
+- I've been using this solidly for a week now and it feels pretty good.  This can be
+considered complete apart from the inclusion of a few more important shortcuts
+when i find them.  
+
+Substance Painter
+- Although it runs like crap on anything with an Intel Integrated Graphics card
+(AKA on 98% of all tablets), i've added a preliminary toolbar for the program anyway.
+- It mimics the layout of the ZBrush toolbar, which although not perfect, seems to work well.
+- Added New/Save/Loaad buttons
+- Added Undo/Redo buttons
+- Added Camera Control Buttons
+- Added Keybind Modifiers (Ctrl/Alt/Shift)
+- Added Focus and Symmetry buttons
+- Added Draw and Eraser tool buttons
+- I recommend you set the PBR quality to low and keep the texture size low in order to
+properly use the program.
+
+
+0.63:
+Icons
+- Added 11 new buttons, bringing the total button/slider count to 143
+- Added new Document buttons
+- Added new Object buttons
+- Added a new DrawAirbrush button
+- Added a new Mask button
+- Added new Focus buttons for Polygroups and Masks, plus a Focus Reset button.
+- Fixed design issues with the Save and Dynamic Topology buttons.
+- Replaced the default toolbar icon with a CHOMP icon.  Snazzy...
+- Currently working in some additional 3D Modelling, UI Switch, Selection and 'Digital-Aesthetic'
+Load/Save buttons.  Should be availaible in the next release :)
+
+ZBrush
+- Fixed issues with the Zoom and Pan buttons, it seems ZBrush is slower than AHK, and as a result
+can miss important keybind instructions.  The instructions for these buttons have been repeated
+further to ensure the program doesn't miss them.
+- Added Focus Mask and Focus Polygroup buttons
+- Doesnt seem quite right, ill be working on it... :x
+
+BlackInk
+- Switched the Add button with DocumentAdd button.
+
+Krita
+- Switched the Add button with DocumentAdd button.
+- Replaced button sliders with sliders
+
+Mischief
+- Added a DocumentAdd button
+- Replaced button sliders with sliders
+- Changed the toolbar layout slightly.
+
+MyPaint
+- Added a DocumentAdd button.
+- Replaced button sliders with sliders
+
+Photoshop
+- Replaced button sliders with sliders
+- Replaced the Add button with the DocumentAdd button
+
+Substance Designer
+- Replaced the Add/Delete buttons with ObjectAdd/Delete buttons
+- Changed the toolbar layout slightly
+
+
+0.62:
+Substance Designer
+- Switched the Zoom Reset key with the Ctrl key, for selecting multiple objects more easily.
+- Added Open/Save icons to the toolbar.
+
+Clip Studio Paint
+- Switched Brush size buttons for a slider
+- Added Open Button
+- Added Shift, Alt and Ctrl buttons
+- Added a Focus Document and Focus 1:1 button.
+
+Photoshop
+- Fixed the duplicate name issue, stopping users from using the toolbar.
+
+Media Bar
+- Ensures the volume increases only by one step for all toolbars, rather than
+the two steps it was increasing by on most toolbars.  This may seem slow, but some
+headphones do not have very good volume calibration, plus Windows 8 doesn't seem to compensate
+for whether headphones or speakers are being used in the volume control, which can cause volume 
+numbers as low as 10 to appear loud on a headphone.  This is designed as a precaution to ensure
+no-ones ears become damaged upon using volume slider and accidentally turning it up too loud.
+
+Extras
+- The release notes you're reading are new!  :OOO
+
+0.61:
+Program
+- Fixed an issue where the toolbar would scale based on the DPI scaling.  As tablets have
+small screens with a high DPI, this is obviously not ideal.  You can now use whatever DPI
+feels best on your tablet, and the toolbar scale will not change (thanks Mimi Min!)

@@ -1,0 +1,339 @@
+﻿; RawInputControlTest.ahk Control definition file.
+; Describ Control Settings in this file.
+; Lines beginning with a semicolon(;) are ignored as comments.
+
+; Sample file: TM2Control
+;   Copy TM2Control.exe to same folder
+; Drop this file into RawInputControlTest.ahk
+
+;############################### Window Settings ##############################
+
+; Background color of window.
+#Window:Color=393939
+; Default font color.
+#Window:FontColor=9B9B9B
+; Font color when button is pressed.
+#Window:ActiveFontColor=00C0FF
+#Window:TransColor=000001
+#Window:Docking=100
+
+; Specify Start-up window position by Left/Right/Top/Bottom. (alone or in combination)
+#Window:Pos=LeftTop
+; You can also specify window position by the coordinate.
+;#Window:X=0
+;#Window:Y=0
+
+; Window size (If not specified, window size will be set automatically.)
+#Window:Width=160
+#Window:Height=1080
+; Margin
+;#Window:MarginLeft=0
+#Window:MarginTop=0
+;#Window:MarginRight=0
+#Window:MarginBottom=0
+
+
+; Window transparency: Full transparent 0 ~ 255 Opaque
+#Window:Transparent=255
+
+;############################## Controls settings #############################
+
+;--------------------------------- Title bar ----------------------------------
+
+; Handle for moving the window. - Control-type: Handle
+#Control:Handle
+;	; Name the controls. You can use letters and numbers.
+	; Please take care to avoid overlap with other controls.
+	Name=Handle
+	; Specify Control`s position. [upper left X-coordinate, upper left Y-coordinate, Width, Height]
+	Pos=0, 0, 0, 0
+	; Specify the button's caption.
+;	Caption=- - -
+	; Specify Caption position. [X-coordinate, Y-coordinate]. You can also specify "Center".
+;	CaptionPos=Center, Center
+	; Specifies the image button is not pressed.
+;	Image1=img\n95x30.bmp
+	; Specifies the image button is pressed.
+;	Image2=img\n95x30a.bmp
+; Min Dock
+
+#ControlOffset:0, 0
+
+#Control:Key
+	Name=MediaBarHeader
+	Pos=0, 0, 80, 245
+	Image1=img\Media Bar BG.png
+
+#Control:Key
+	Name=MusicIcon
+	Pos=10, 245, 60, 60
+	Image1=img\MusicIcon.png
+
+#Control:Key
+	Name=MediaBarHBuffer01
+	Pos=0, 245, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer02
+	Pos=70, 245, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+
+;-------------------------------------
+
+#Control:Key
+	Name=MediaBarVBuffer01
+	Pos=0, 305, 80, 10
+	Image1=img\Media Bar Icon VBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer1
+	Pos=0, 315, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+#Control:Key
+	Name=Play
+	Pos=10, 315, 60, 60
+	Image1=img\Play.png
+	Image2=img\Play_pressed.png
+	DownKey={Media_Play_Pause Down}
+	UpKey={Media_Play_Pause Up}
+
+#Control:Key
+	Name=MediaBarHBuffer2
+	Pos=70, 315, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+;-------------------------------------
+
+#Control:Key
+	Name=MediaBarVBuffer1
+	Pos=0, 375, 80, 10
+	Image1=img\Media Bar Icon VBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer3
+	Pos=0, 385, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer4
+	Pos=70, 385, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+;-------------------------------------
+
+#Control:Key
+	Name=Rewind
+	Pos=10, 385, 60, 60
+	Image1=img\Rewind.png
+	Image2=img\Rewind_pressed.png
+	DownKey={Media_Prev Down}
+	UpKey={Media_Prev Up}
+
+;-------------------------------------
+
+#Control:Key
+	Name=MediaBarVBuffer2
+	Pos=0, 445, 80, 10
+	Image1=img\Media Bar Icon VBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer5
+	Pos=0, 455, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer6
+	Pos=70, 455, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+;-------------------------------------
+
+#Control:Key
+	Name=FastForward
+	Pos=10, 455, 60, 60
+	Image1=img\Fast-Forward.png
+	Image2=img\Fast-Forward_pressed.png
+	DownKey={Media_Next Down}
+	UpKey={Media_Next Up}
+
+;-------------------------------------
+
+#Control:Key
+	Name=MediaBarVBuffer3
+	Pos=0, 515, 80, 10
+	Image1=img\Media Bar Icon VBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer7
+	Pos=0, 525, 10, 130
+	Image1=img\Media Bar Icon HBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer8
+	Pos=70, 525, 10, 130
+	Image1=img\Media Bar Icon HBuffer.png
+
+
+;-------------------------------------
+
+#Control:VSlider
+	Name=Volume
+	Pos=10, 525, 60, 130
+	Image1=img\Volume-Scroll.png
+	Image2=img\Volume-Scroll_pressed.png
+	Step=1
+	UpKey={Volume_Up Down}{Volume_Up Up}
+	DownKey={Volume_Down Down}{Volume_Down Up}
+
+;-------------------------------------
+
+#Control:Key
+	Name=MediaBarVBuffer4
+	Pos=0, 655, 80, 10
+	Image1=img\Media Bar Icon VBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer9
+	Pos=0, 665, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+#Control:Key
+	Name=MediaBarHBuffer10
+	Pos=70, 665, 10, 60
+	Image1=img\Media Bar Icon HBuffer.png
+
+;-------------------------------------
+
+#Control:Key
+	Name=Mute
+	Pos=10, 665, 60, 60
+	Image1=img\Mute.png
+	Image2=img\Mute_pressed.png
+	DownKey={Volume_Mute}
+
+#Control:Key
+	Name=MediaBarHeader2
+	Pos=0, 725, 80, 315
+	Image1=img\Media Bar Header.png
+
+
+;-------------------------------------
+; END MEDIA BAR CODE
+;-------------------------------------
+
+#ControlOffset:80, 0
+
+#Control:Dock2
+	Name=menudock
+	Pos=0, 0, 80, 85
+	Image1=img\Default1_header.png
+
+#Control:Key
+	Name=Footer
+	Pos=0, 85, 80, 10
+	Image1=img\Footer1_header.png
+
+
+#ControlOffset:10, 105
+
+;-------------------------------------
+; NOW MAKE YER TOOLBAR
+;-------------------------------------
+
+#Control:Key
+	Name=New
+	Pos=0, 0, 60, 60
+	Image1=img\DocumentAdd.png
+	Image2=img\DocumentAdd_pressed.png
+	DownKey=^n
+
+#Control:Key
+	Name=Save
+	Pos=0, 70, 60, 60
+	Image1=img\SystemSave.png
+	Image2=img\SystemSave_pressed.png
+	DownKey=^s
+
+#ControlOffset:0, 140
+
+#Control:Key
+	Name=Undo
+	Pos=0, 0, 60, 60
+	Image1=img\SystemUndo.png
+	Image2=img\SystemUndo_pressed.png
+	DownKey=^z
+
+#Control:Key
+	Name=Redo
+	Pos=0, 70, 60, 60
+	Image1=img\SystemRedo.png
+	Image2=img\SystemRedo_pressed.png
+	DownKey=+^z
+
+#ControlOffset:0, 140
+
+#Control:VSlider
+	Name=BrushSize
+	Pos=0, 0, 60, 130
+	Image1=img\BrushSizeSlider.png
+	Image2=img\BrushSizeSlider_pressed.png
+	Step=1
+	UpKey=f
+	DownKey=d
+
+#Control:VSlider
+	Name=BrushOpacity
+	Pos=0, 140, 60, 130
+	Image1=img\BrushStrengthSlider.png
+	Image2=img\BrushStrengthSlider_pressed.png
+	Step=1
+	UpKey=s
+	DownKey=a
+
+#ControlOffset:0, 280
+
+#Control:Key
+	Name=ColourPicker
+	Pos=0, 0, 60, 60
+	Image1=img\ColourPicker.png
+	Image2=img\ColourPicker_pressed.png
+	DownKey={Ctrl Down}
+	UpKey={Ctrl Up}
+
+#Control:Key
+	Name=Pen
+	Pos=0, 70, 60, 60
+	Image1=img\BrushPanel.png
+	Image2=img\BrushPanel_pressed.png
+	DownKey=b
+
+#Control:Key
+	Name=Layers
+	Pos=0, 140, 60, 60
+	Image1=img\Layers.png
+	Image2=img\Layers_pressed.png
+	DownKey=l
+
+#ControlOffset:0, 210
+
+#Control:Key
+	Name=TrianglePalette
+	Pos=0, 0, 60, 60
+	Image1=img\ColourTriangle.png
+	Image2=img\ColourTriangle_pressed.png
+	DownKey=g
+
+#Control:Key
+	Name=TonalPalette
+	Pos=0, 70, 60, 60
+	Image1=img\ColourSquare.png
+	Image2=img\ColourSquare_pressed.png
+	DownKey=c
+
+
+
+
+
